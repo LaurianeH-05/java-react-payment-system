@@ -1,3 +1,4 @@
+package backend;
 /* owns behavior + state */
 
 public class Payment {
@@ -55,5 +56,23 @@ public class Payment {
         System.out.println(status);
         System.out.println(paymentId);
         System.out.println(fee);
+    }
+
+    interface PaymentProcessor {
+        void processPayment(Payment p);
+    }
+
+    class CreditCardProcessor implements PaymentProcessor {
+        @Override
+        public void processPayment(Payment p) {
+            System.out.println("Processing via Credit Card");
+        }
+    }
+
+    class PayPalProcessor implements PaymentProcessor {
+        @Override
+        public void processPayment(Payment p) {
+            System.out.println("Processing via PayPal");
+        }
     }
 }

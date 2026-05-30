@@ -2,7 +2,7 @@
 function TransactionCard(props) {
     return (
         <div>
-            <h3>Payment #{props.paymentID}</h3>
+            <h3>Payment #{props.paymentId}</h3>
             <p>Amount: {props.amount}</p>
             <p>Currency: {props.currency}</p>
             <p>Fee: {props.fee}</p>
